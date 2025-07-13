@@ -27,7 +27,7 @@ A Python application that translates text from English to French using LangChain
    ```bash
    # If using git
    git clone <repository-url>
-   cd text-translator
+   cd explore-langchain/text-translator
    ```
 
 2. **Create a Python virtual environment**
@@ -109,10 +109,10 @@ text-translator/
 ├── README.md              # This file
 ├── requirements.txt       # Python dependencies
 ├── text-translator.py     # Main application
-├── env.example           # Example environment variables
-├── .gitignore            # Git ignore rules
-└── .env                  # Environment variables (create from env.example)
+└── env.example           # Example environment variables
 ```
+
+**Note:** The `.gitignore` file is located in the parent directory (`explore-langchain/`).
 
 ## Dependencies
 
