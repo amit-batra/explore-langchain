@@ -27,30 +27,30 @@ A Python application that translates text from English to French using LangChain
    ```bash
    # If using git
    git clone <repository-url>
-   cd explore-langchain/text-translator
+   cd <repository-root-dir>
    ```
 
 2. **Create a Python virtual environment**
    ```bash
    # On macOS/Linux
-   python3 -m venv venv
+   python3 -m venv .venv
    
    # On Windows
-   python -m venv venv
+   python -m venv .venv
    ```
 
 3. **Activate the virtual environment**
    ```bash
    # On macOS/Linux
-   source venv/bin/activate
+   source .venv/bin/activate
    
    # On Windows
-   venv\Scripts\activate
+   .venv\Scripts\activate
    ```
 
 4. **Install dependencies**
    ```bash
-   pip install -r requirements.txt
+   pip install -r text-translator/requirements.txt
    ```
 
 ## Configuration
@@ -75,14 +75,14 @@ If you don't set up the `.env` file, the application will prompt you to enter yo
 
 1. **Ensure your virtual environment is activated**
    ```bash
-   source venv/bin/activate  # macOS/Linux
+   source .venv/bin/activate  # macOS/Linux
    # or
-   venv\Scripts\activate     # Windows
+   .venv\Scripts\activate     # Windows
    ```
 
 2. **Run the text translator**
    ```bash
-   python text-translator.py
+   python text-translator/text-translator.py
    ```
 
 3. **Enter text to translate**
@@ -105,14 +105,15 @@ Enter the text to translate (or 'exit' to quit): exit
 ## Project Structure
 
 ```
-text-translator/
-├── README.md              # This file
-├── requirements.txt       # Python dependencies
-├── text-translator.py     # Main application
-└── env.example           # Example environment variables
+explore-langchain
+├── env.example               # Example environment variables
+├── .env                      # Environment variables (create from env.example)
+├── .gitignore                # Ignore list for Git source control
+└── text-translator/
+    ├── README.md             # This file
+    ├── requirements.txt      # Python dependencies
+    └── text-translator.py    # Main application
 ```
-
-**Note:** The `.gitignore` file is located in the parent directory (`explore-langchain/`).
 
 ## Dependencies
 
@@ -127,7 +128,7 @@ text-translator/
 ### Common Issues
 
 1. **Import Error for dotenv**
-   - Make sure you've installed the requirements: `pip install -r requirements.txt`
+   - Make sure you've installed the requirements: `pip install -r text-translator/requirements.txt`
 
 2. **API Key Issues**
    - Verify your Google Gemini API key is correct
